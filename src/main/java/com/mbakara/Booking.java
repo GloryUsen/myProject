@@ -1,32 +1,42 @@
 package com.mbakara;
 
 public class Booking {
-    private String carBrand;
-    private User user;
+    private String pickUpLocation;
+    private String dropOffLocation;
+    private String type;
     private int bookingId;
-    private Car car;
+    private String carModel;
 
-    public Booking(String carBrand, User user, int bookingId, Car car) {
-        this.carBrand = carBrand;
-        this.user = user;
+    public Booking(String pickUpLocation, String dropOffLocation, String type, int bookingId, String carModel) {
+        this.pickUpLocation = pickUpLocation;
+        this.dropOffLocation = dropOffLocation;
+        this.type = type;
         this.bookingId = bookingId;
-        this.car = car;
+        this.carModel = carModel;
     }
 
-    public String getCarBrand() {
-        return carBrand;
+    public String getPickUpLocation() {
+        return pickUpLocation;
     }
 
-    public void setCarBrand(String carBrand) {
-        this.carBrand = carBrand;
+    public void setPickUpLocation(String pickUpLocation) {
+        this.pickUpLocation = pickUpLocation;
     }
 
-    public User getUser() {
-        return user;
+    public String getDropOffLocation() {
+        return dropOffLocation;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setDropOffLocation(String dropOffLocation) {
+        this.dropOffLocation = dropOffLocation;
+    }
+
+    public String getCarType() {
+        return type;
+    }
+
+    public void setCarType(String carType) {
+        this.type = carType;
     }
 
     public int getBookingId() {
@@ -37,24 +47,23 @@ public class Booking {
         this.bookingId = bookingId;
     }
 
-    public Car getCar() {
-        return car;
+
+    public String getCarModel() {
+        return carModel;
     }
 
-    public void setCar(Car car) {
-        this.car = car;
+    public void setCarModel(String carModel) {
+        this.carModel = carModel;
     }
 
     @Override
     public String toString() {
         return "Booking{" +
-                "carBrand='" + carBrand + '\'' +
-                ", user=" + user +
+                "pickUpLocation='" + pickUpLocation + '\'' +
+                ", dropOffLocation='" + dropOffLocation + '\'' +
+                ", carType='" + type + '\'' +
                 ", bookingId=" + bookingId +
-                ", car=" + car +
+                ", carModel='" + carModel + '\'' +
                 '}';
     }
-
-
-
 }

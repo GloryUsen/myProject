@@ -6,14 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CarRepository {
-    private static List<Car> cars; // defining the repository class to hold the car obj.
-
-    public CarRepository(List<Car> cars) { // This constructor takes an existing list(taking parameter of type car).
-        this.cars = cars;
-    }
-
+    private static List<Car> cars;                      // defining the repository class to hold the car obj.
     public CarRepository(){
-        cars = new ArrayList<>();// does not take any parameter (it initialised the list of cars)
+        cars = new ArrayList<>();                   // does not take any parameter (it initialised the list of cars)
     }
 
     /**
