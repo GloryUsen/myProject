@@ -1,6 +1,8 @@
 package com.mbakara;
 
 public class Car {
+
+    private Long id;
     private String carType;
     private String carColor;
     private String carModel;
@@ -8,11 +10,22 @@ public class Car {
     private boolean isBooked;
 
 
-    public Car(String carType, String carColor, String carModel, String carBrand) {
+
+
+    public Car(long id, String carType, String carColor, String carModel, String carBrand) {
+        this.id = id;
         this.carType = carType;
         this.carColor = carColor;
         this.carModel = carModel;
         this.carBrand = carBrand;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getCarType() {

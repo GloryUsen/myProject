@@ -2,13 +2,13 @@ package com.mbakara;
 
 public class User {
     private String userName;
-    private int userId;
-    private String bookCar;
+    private String userId;
+    private String address;
 
-    public User(String userName, int userId, String bookCar) {
+    public User(String userName, String userId, String address) {
         this.userName = userName;
         this.userId = userId;
-        this.bookCar = bookCar;
+        this.address = address ;
     }
 
     public String getUserName() {
@@ -19,20 +19,20 @@ public class User {
         this.userName = userName;
     }
 
-    public int getUserId() {
-        return userId;
+    public String getUserId() {
+       return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
-    public String getBookCar() {
-        return bookCar;
+    public String getAddress() {
+        return address;
     }
 
-    public void setBookCar(String bookCar) {
-        this.bookCar = bookCar;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     @Override
@@ -40,7 +40,7 @@ public class User {
         return "User{" +
                 "userName='" + userName + '\'' +
                 ", userId=" + userId +
-                ", bookCar='" + bookCar + '\'' +
+                ", address ='" + address + '\'' +
                 '}';
     }
 }

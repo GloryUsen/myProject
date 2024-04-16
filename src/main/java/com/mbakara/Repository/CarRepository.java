@@ -22,7 +22,11 @@ public class CarRepository {
     /**
      * method to get all cars in the repository
      */
-    public static List<Car> getAllCars(){
+    public  List<Car> getAllCars(){
         return cars;
+    }
+    
+    public boolean removeCar(Car car){
+        return cars.remove(car);
     }
 }
