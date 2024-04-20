@@ -1,14 +1,14 @@
-package com.mbakara;
+package com.mbakara.Entity;
 
 public class User {
     private String userName;
     private String userId;
-    private String address;
+    private String email;
 
-    public User(String userName, String userId, String address) {
+    public User(String userName, String userId, String email) {
         this.userName = userName;
         this.userId = userId;
-        this.address = address ;
+        this.email = email ;
     }
 
     public String getUserName() {
@@ -27,12 +27,12 @@ public class User {
         this.userId = userId;
     }
 
-    public String getAddress() {
-        return address;
+    public String getUserEmail() {
+        return email;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setUserEmail() {
+        this.email = getUserEmail();
     }
 
     @Override
@@ -40,7 +40,8 @@ public class User {
         return "User{" +
                 "userName='" + userName + '\'' +
                 ", userId=" + userId +
-                ", address ='" + address + '\'' +
+                ", email ='" + email + '\'' +
                 '}';
     }
+
 }

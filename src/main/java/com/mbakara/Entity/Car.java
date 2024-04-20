@@ -1,4 +1,4 @@
-package com.mbakara;
+package com.mbakara.Entity;
 
 public class Car {
 

@@ -1,19 +1,21 @@
-package com.mbakara;
+package com.mbakara.Entity;
 
-public class Booking {
+public class Bookings {
     private String pickUpLocation;
     private String dropOffLocation;
-    private String type;
+    private String carType;
     private int bookingId;
     private String carModel;
 
-    public Booking(String pickUpLocation, String dropOffLocation, String type, int bookingId, String carModel) {
+    public Bookings(String pickUpLocation, String dropOffLocation, String carType, int bookingId, String carModel) {
         this.pickUpLocation = pickUpLocation;
         this.dropOffLocation = dropOffLocation;
-        this.type = type;
+        this.carType = carType;
         this.bookingId = bookingId;
         this.carModel = carModel;
     }
+
+
 
     public String getPickUpLocation() {
         return pickUpLocation;
@@ -32,11 +34,11 @@ public class Booking {
     }
 
     public String getCarType() {
-        return type;
+        return carType;
     }
 
     public void setCarType(String carType) {
-        this.type = carType;
+        this.carType = carType;
     }
 
     public int getBookingId() {
@@ -56,14 +58,20 @@ public class Booking {
         this.carModel = carModel;
     }
 
+    public boolean remove(){
+        return remove();
+    }
+
     @Override
     public String toString() {
         return "Booking{" +
                 "pickUpLocation='" + pickUpLocation + '\'' +
                 ", dropOffLocation='" + dropOffLocation + '\'' +
-                ", carType='" + type + '\'' +
+                ", carType='" + carType + '\'' +
                 ", bookingId=" + bookingId +
                 ", carModel='" + carModel + '\'' +
                 '}';
     }
+
+
 }

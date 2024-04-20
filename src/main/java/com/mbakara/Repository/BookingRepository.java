@@ -2,32 +2,30 @@ package com.mbakara.Repository;
 
     // Defining the bookingCar class
 
-import com.mbakara.Booking;
+import com.mbakara.Entity.Bookings;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class BookingRepository {
 
-    private List<Booking> bookingRepositories;
+    private List<Bookings> bookings;
 
     public BookingRepository(){
-        bookingRepositories = new ArrayList<>();
+        this.bookings = new ArrayList<>();
 
     }
-    public void addBookingRepository(Booking booking){
-        bookingRepositories.add(booking);
+    public void addBooking(Bookings booking){
+        this.bookings.add(booking);
     }
 
-   public List<Booking> getAllBookings(){
+   public List<Bookings> getAllBookings(){
+        return this.bookings;
+   }
 
-       return bookingRepositories;
+   public void removeBooking(Bookings bookings){
+        bookings.remove();
    }
 
 
-
-
-
-
-
-    }
+}

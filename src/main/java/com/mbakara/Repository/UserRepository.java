@@ -1,6 +1,6 @@
 package com.mbakara.Repository;
 
-import com.mbakara.User;
+import com.mbakara.Entity.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,8 +14,8 @@ public class UserRepository {
 
 
 
-    public void addUser(User user){
-        users.add(user);
+    public boolean addUser(User user){
+        return users.add(user);
 
     }
 
