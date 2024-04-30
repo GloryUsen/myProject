@@ -14,11 +14,13 @@ import com.mbakara.Entity.User;
 import com.mbakara.Repository.BookingRepository;
 import com.mbakara.Repository.CarRepository;
 import com.mbakara.Repository.UserRepository;
+import com.mbakara.service.UserService;
+import com.mbakara.service.servicelmpl.UserServiceImpl;
 
 import java.util.List;
 import java.util.Scanner;
 
-    public class Main {  // This main class is where the execution of the code begins.
+    public class  Main {  // This main class is where the execution of the code begins.
 
         public static void main(String[] args) {
             CarRepository carRepository = new CarRepository(); //creating a carRepository instance.
@@ -88,11 +90,11 @@ import java.util.Scanner;
                     case 2:
                         System.out.println("Enter the Car ID to remove:");
                         int carIdToRemove = scanner.nextInt();
-                        Car carToRemove = (Car) carRepository.getCarById(carIdToRemove);
+                        Car carToRemove = (Car) carRepository.getCarById(carIdToRemove); // logic starts, this is a service logic.
                         if (carToRemove != null) {
                             carRepository.removeCar(carToRemove);
                             System.out.println("Car removed successfully.");
-                        } else {
+
                             System.out.println("Car not found.");
                         }
                         break;
@@ -131,7 +133,7 @@ import java.util.Scanner;
             }
         }
 
-        private static void displayCars(List<Car> cars) { //This si a method that displays list of cars
+        private static void displayCars(List<Car> cars) { //This is a method that displays list of cars
             if (cars.isEmpty()) { // this line checks if the cars are available or not, return True. which is
                 System.out.println("No cars available"); // No cars available.
                 return;// it means no car is available for booking.
@@ -163,7 +165,7 @@ import java.util.Scanner;
         }
 
 
-        UserRepository userRepository = new UserRepository();
+        UserServiceImpl userService = new UserServiceImpl();
         Scanner scanner = new Scanner(System.in);
 
         {
@@ -179,7 +181,7 @@ import java.util.Scanner;
 
             switch (choice) {
                 case 1:
-                    List<User> allUsers = userRepository.getAllUsers();
+                    List<User> allUsers = userService.getAllUsers();
                     displayUsers(allUsers);
                     break;
                 case 2:
@@ -192,7 +194,7 @@ import java.util.Scanner;
                     System.out.println("Enter Email:");
                     String email = scanner.nextLine();
 
-                    userRepository.addUser(new User(userId, username, email));
+                    userService.addUser(new User(userId, username, email));
                     System.out.println("User added successfully.");
                     break;
                 case 3:

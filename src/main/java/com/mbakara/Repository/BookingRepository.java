@@ -23,7 +23,7 @@ public class BookingRepository {
         return this.bookings;
    }
 
-   public void removeBooking(Bookings bookings){
+   public void removeBooking(){
         bookings.remove();
    }
 
