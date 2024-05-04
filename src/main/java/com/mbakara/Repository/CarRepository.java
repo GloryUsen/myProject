@@ -28,13 +28,12 @@ public class CarRepository {
         return cars;
     }
 
-    public List<Car> getCarById(int carIdToRemove){
+    public List<Car> getCarById(Long carIdToRemove){
 
         return getCarById(carIdToRemove);
     }
 
-    public boolean removeCar(Car car){
-
-        return cars.remove(car);
+    public void removeCar(Car car){
+        cars.remove(car);
     }
 }

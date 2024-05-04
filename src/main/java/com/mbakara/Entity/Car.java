@@ -2,7 +2,7 @@ package com.mbakara.Entity;
 
 public class Car {
 
-    private Long id;
+    private long id;
     private String carType;
     private String carColor;
     private String carModel;
@@ -12,7 +12,8 @@ public class Car {
 
 
 
-    public Car(long id, String carType, String carColor, String carModel, String carBrand) {
+    public Car(int id, String carType, String carColor, String carModel, String carBrand) {
+
         this.id = id;
         this.carType = carType;
         this.carColor = carColor;
@@ -20,11 +21,11 @@ public class Car {
         this.carBrand = carBrand;
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

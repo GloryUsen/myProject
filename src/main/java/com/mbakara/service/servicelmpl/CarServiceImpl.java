@@ -12,12 +12,12 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public List<Car> getAllCars() {
-        return null;
+        return carRepository.getAllCars();
     }
 
     @Override
     public Car getCarById(Long id) {
-        return CarRepository.cars.get(2);
+        return (Car) carRepository.getCarById(id);
     }
 
     @Override
@@ -25,14 +25,19 @@ public class CarServiceImpl implements CarService {
         carRepository.addCar(car);
 
     }
-
     @Override
     public void removeCar(Car car) {
-        int carIdToRemove = 1;
-        Car carToRemove = (Car) carRepository.getCarById(carIdToRemove);
+        Long carIdToRemove = car.getId();
+        List<Car> carToRemove = carRepository.getCarById(carIdToRemove);
         if (carToRemove != null) {
-            carRepository.removeCar(carToRemove);
+            carRepository.removeCar(carToRemove.get(0));
         }
     }
+
 }
+
+
+
+
+
 

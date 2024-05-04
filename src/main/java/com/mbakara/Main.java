@@ -13,8 +13,6 @@ import com.mbakara.Entity.Car;
 import com.mbakara.Entity.User;
 import com.mbakara.Repository.BookingRepository;
 import com.mbakara.Repository.CarRepository;
-import com.mbakara.Repository.UserRepository;
-import com.mbakara.service.UserService;
 import com.mbakara.service.servicelmpl.UserServiceImpl;
 
 import java.util.List;
@@ -90,7 +88,7 @@ import java.util.Scanner;
                     case 2:
                         System.out.println("Enter the Car ID to remove:");
                         int carIdToRemove = scanner.nextInt();
-                        Car carToRemove = (Car) carRepository.getCarById(carIdToRemove); // logic starts, this is a service logic.
+                        Car carToRemove = (Car) carRepository.getCarById((long) carIdToRemove); // logic starts, this is a service logic.
                         if (carToRemove != null) {
                             carRepository.removeCar(carToRemove);
                             System.out.println("Car removed successfully.");
