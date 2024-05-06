@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CarRepository {
+
     public static List<Car> cars;                      // defining the repository class to hold the car obj.
     public CarRepository(){
         cars = new ArrayList<>();                   // does not take any parameter (it initialised the list of cars)
@@ -28,9 +29,12 @@ public class CarRepository {
         return cars;
     }
 
-    public List<Car> getCarById(Long carIdToRemove){
+    public Car getCarById(int carIdToRemove){
 
-        return getCarById(carIdToRemove);
+        return cars.get(carIdToRemove);
+
+
+
     }
 
     public void removeCar(Car car){

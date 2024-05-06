@@ -8,5 +8,5 @@ public interface BookingService {
 
     List<Bookings> getAllBooking();
     void addBookings();
-    void removeBooking();
+    void removeBooking(Bookings bookings);
 }

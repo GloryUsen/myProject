@@ -88,7 +88,7 @@ import java.util.Scanner;
                     case 2:
                         System.out.println("Enter the Car ID to remove:");
                         int carIdToRemove = scanner.nextInt();
-                        Car carToRemove = (Car) carRepository.getCarById((long) carIdToRemove); // logic starts, this is a service logic.
+                        Car carToRemove = (Car) carRepository.getCarById( carIdToRemove); // logic starts, this is a service logic.
                         if (carToRemove != null) {
                             carRepository.removeCar(carToRemove);
                             System.out.println("Car removed successfully.");

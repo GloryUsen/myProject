@@ -17,6 +17,7 @@ public class BookingRepository {
 
     }
     public void addBooking(Bookings booking){
+
         this.booking.add(booking);
     }
 
@@ -24,8 +25,8 @@ public class BookingRepository {
         return this.booking;
    }
 
-   public void removeBooking(){
-        booking.remove(booking);
+   public void removeBooking(Bookings bookings){
+        booking.remove(bookings);
    }
 
 

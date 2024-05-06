@@ -16,7 +16,7 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public Car getCarById(Long id) {
+    public Car getCarById(int id) {
         return (Car) carRepository.getCarById(id);
     }
 
@@ -27,10 +27,10 @@ public class CarServiceImpl implements CarService {
     }
     @Override
     public void removeCar(Car car) {
-        Long carIdToRemove = car.getId();
-        List<Car> carToRemove = carRepository.getCarById(carIdToRemove);
+        int carIdToRemove = (int)car.getId();
+        Car carToRemove = carRepository.getCarById(carIdToRemove);
         if (carToRemove != null) {
-            carRepository.removeCar(carToRemove.get(0));
+            carRepository.removeCar(carToRemove);
         }
     }
 
