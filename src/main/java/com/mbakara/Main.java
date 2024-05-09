@@ -85,15 +85,15 @@ import java.util.Scanner;
                         List<Car> allCars = carRepository.getAllCars();
                         displayCars(allCars);
                         break;
-                    case 2:
-                        System.out.println("Enter the Car ID to remove:");
-                        int carIdToRemove = scanner.nextInt();
-                        Car carToRemove = (Car) carRepository.getCarById( carIdToRemove); // logic starts, this is a service logic.
-                        if (carToRemove != null) {
-                            carRepository.removeCar(carToRemove);
-                            System.out.println("Car removed successfully.");
-
-                            System.out.println("Car not found.");
+                    case 2: // when a user enters Option2(case2) The program ask them to
+                        System.out.println("Enter the Car ID to remove:"); // enter the ID of the car the want to remove
+                        int carIdToRemove = scanner.nextInt();// reading the input provided by the User been the id of the car to remove
+                        Car carToRemove = carRepository.getCarById(carIdToRemove);// Finding the car with the ID in the list of cars.
+                        if (carToRemove != null) { // if exist in the list
+                            carRepository.removeCar(carToRemove);// car is removed
+                            System.out.println("Car removed successfully.");// Successful
+                            // if the car is not found, meaning not existing in the list.
+                            System.out.println("Car not found."); // car not found message printed.
                         }
                         break;
                     case 3:

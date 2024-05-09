@@ -9,11 +9,7 @@ public class Car {
     private String carBrand;
     private boolean isBooked;
 
-
-
-
-    public Car(int id, String carType, String carColor, String carModel, String carBrand) {
-
+    public Car(long id, String carType, String carColor, String carModel, String carBrand) {
         this.id = id;
         this.carType = carType;
         this.carColor = carColor;
@@ -25,7 +21,7 @@ public class Car {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

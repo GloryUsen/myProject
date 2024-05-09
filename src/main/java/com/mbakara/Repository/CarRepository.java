@@ -25,19 +25,21 @@ public class CarRepository {
      * method to get all cars in the repository
      */
     public  List<Car> getAllCars(){
-
         return cars;
     }
 
-    public Car getCarById(int carIdToRemove){
 
-        return cars.get(carIdToRemove);
-
-
-
+    public Car getCarById(long id){ //Looking at all the cars in the parking space(In the List).
+        for(Car car : cars){ // iterating on each car, if the ID matches the required car.
+            if(car.getId() == id){// If it finds car with the matching ID,
+                return car; //it returns That car.
+            } // but if it doesn't find any car with the specific ID, after checking all the cars in the List
+        }
+        return null; // it returns Null.
     }
 
     public void removeCar(Car car){
         cars.remove(car);
     }
+
 }
